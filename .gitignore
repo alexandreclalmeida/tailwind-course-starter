@@ -1,0 +1,21 @@
+# Dependencies
+/node_modules
+
+# Production
+/dist
+/dist-ssr
+
+# Prettier
+.prettierrc
+
+# Logs
+/logs
+*.log
+npm-debug.log*
+
+# Misc
+*.local
+.env
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
