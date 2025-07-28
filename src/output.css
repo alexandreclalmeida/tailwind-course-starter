@@ -355,21 +355,6 @@
   .min-h-\[400px\] {
     min-height: 400px;
   }
-  .container {
-    width: 100%;
-    @media (width >= 40rem ) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem ) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem ) {
-      max-width: 64rem;
-    }
-    @media (width >= 75rem ) {
-      max-width: 75rem;
-    }
-  }
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
