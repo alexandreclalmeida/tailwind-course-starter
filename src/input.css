@@ -72,7 +72,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-.container {
+@utility container {
   width: 100%;
   @media (width >= 40rem /* 640px */) {
     max-width: 40rem /* 640px */;
