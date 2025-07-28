@@ -207,17 +207,6 @@
   .\@container {
     container-type: inline-size;
   }
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
   .absolute {
     position: absolute;
   }
@@ -366,6 +355,21 @@
   .min-h-\[400px\] {
     min-height: 400px;
   }
+  .container {
+    width: 100%;
+    @media (width >= 40rem ) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem ) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem ) {
+      max-width: 64rem;
+    }
+    @media (width >= 75rem ) {
+      max-width: 75rem;
+    }
+  }
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
@@ -393,29 +397,11 @@
   .flex-1 {
     flex: 1;
   }
-  .shrink {
-    flex-shrink: 1;
-  }
-  .grow {
-    flex-grow: 1;
-  }
   .caption-bottom {
     caption-side: bottom;
   }
   .border-collapse {
     border-collapse: collapse;
-  }
-  .rotate-90 {
-    rotate: 90deg;
-  }
-  .rotate-180 {
-    rotate: 180deg;
-  }
-  .rotate-270 {
-    rotate: 270deg;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .animate-ping {
     animation: var(--animate-ping);
@@ -491,10 +477,6 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-  .border-none {
-    --tw-border-style: none;
-    border-style: none;
   }
   .border-white\/40 {
     border-color: color-mix(in srgb, #fff 40%, transparent);
@@ -958,41 +940,6 @@
     }
   }
 }
-.container {
-  width: 100%;
-  @media (width >= 40rem ) {
-    max-width: 40rem;
-  }
-  @media (width >= 48rem ) {
-    max-width: 48rem;
-  }
-  @media (width >= 64rem ) {
-    max-width: 64rem;
-  }
-  @media (width >= 75rem ) {
-    max-width: 75rem;
-  }
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-scroll-snap-strictness {
   syntax: "*";
   inherits: false;
@@ -1176,11 +1123,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-scroll-snap-strictness: proximity;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
